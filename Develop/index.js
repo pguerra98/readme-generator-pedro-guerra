@@ -25,6 +25,20 @@ const questions = [
 
     {
         type: 'input',
+        name: 'email',
+        message: 'Please provide your email',
+        validate: q7input => {
+            if (q7input) {
+                return true;
+            } else {
+                console.log('Please try entering your email again.');
+                return false;
+            }
+        }
+    },
+
+    {
+        type: 'input',
         name: 'GitUsername',
         message: 'Please provide your GitHub username',
         validate: q2input => {
@@ -91,6 +105,23 @@ const questions = [
         name: 'license',
         message: 'Please select a license to use for your project, if no license is needed, select no license',
         choices: ['MIT', 'Apache', 'no license', 'agpl']
+    },
+
+    
+    {
+
+        type: 'input',
+        name: 'contributing',
+        message: 'Provide the outline for contributing',
+        validate: q8input => {
+            if (q8input) {
+                return true;
+            } else {
+                console.log('Please provide information on how to test the project.');
+                return false;
+            }
+        }
+    
     },
 
     {
